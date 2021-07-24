@@ -7,6 +7,9 @@ carros.splice(posicao, 1) // remove uma posição do meu array
 
 carros.push("brasilia"); // insere a *brasilia* na última posição do meu array
 
+
+console.log("Meu carro: " + carros.filter("corsa"));
+
 console.log(carros);
 
 carros.pop()
