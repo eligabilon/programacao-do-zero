@@ -1,7 +1,7 @@
 ﻿# Curso de Programação
 ## _Programação do Zero_
 
-Nesso curso veremos veremos do zero ao avançado em programação
+Nesso curso veremos veremos do zero ao avançado em programação.
 Abordaremos as seguintes tecnologias
 
 - HTML
