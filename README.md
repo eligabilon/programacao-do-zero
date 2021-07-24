@@ -27,6 +27,7 @@ Abordaremos as seguintes tecnologias
 - Modelagem
 - Análise de Requisitos
 - Scrum
+- Kanban
 
 ## Ferramentas que serão utilizadas
 
@@ -49,7 +50,8 @@ Necessário...
 * [Eclipse - Spring Tools 4](https://spring.io/tools)
 * [DBeaver](https://dbeaver.io/download/) - Manager de Banco
 * [BeekeeperStudio](https://www.beekeeperstudio.io/) - Manager de Banco
-* [Whimsical](https://whimsical.com/login) - Modelagem
+* [Whimsical](https://whimsical.com/login) - Modelagem - Prototipagem
+* [Jira](https://www.atlassian.com/br/try/cloud/signup?bundle=jira-software-confluence&edition=free) - Kanban - Board tasks
 * [Postman](https://www.postman.com/downloads/canary/)
 * [MongoDB](https://www.mongodb.com/cloud/atlas)
 * [Redis Manager](https://rdm.dev/pricing)
