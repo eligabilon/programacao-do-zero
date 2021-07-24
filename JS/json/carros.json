@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "marca": "Fiat",
+        "valor": 85.000,
+        "cor": "Preto",
+        "aro": "16'",
+        "porta": 4
+    },
+    {
+        "id": 2,
+        "marca": "Honda",
+        "valor": 75.000,
+        "cor": "Prata",
+        "aro": "18'",
+        "porta": 5
+    }
+]
