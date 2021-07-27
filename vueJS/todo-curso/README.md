@@ -1,6 +1,6 @@
 # Subir Projeto
 
-Ter o node.js instaldo
+Ter o node.js instalado
 
 # Execução do front
 ```sh
