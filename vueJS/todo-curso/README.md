@@ -13,5 +13,5 @@ $ npm run dev
 ```sh
 //entrar na pasta api e executar os comando abaixo
 $ npm install
-$ node run dev
+$ npm run dev
 ```
