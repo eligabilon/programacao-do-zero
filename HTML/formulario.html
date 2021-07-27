@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo_da_barra.png">
+    <title>Cadastro de Aluno</title>
+    <style>
+        .titulo {
+           color: blue; 
+        }
+    </style>
+</head>
+<body>    
+    <form action="">
+        <div class="titulo">
+            <center>Programador do Zero</center><br>
+        </div>
+        <p>
+            Primeiro nome: <input type="text" name="primeiro_nome" id="primeiro_nome" placeholder="Primeiro nome do usuário" size="50" >
+            Último nome: <input type="text" name="ultimo_nome" id="ultimo_nome">
+        </p>
+        
+        <p>Telefone: <input type="text" name="fone" id="fone"></p>                
+        
+        <p>Email: <input type="email" name="email" id="email"></p>            
+        
+        <p>Conf. Email: <input type="email" name="conf_email" id="conf_email"></p>
+        
+        <p>Senha: <input type="password" name="senha" id="senha"></p>
+        
+        <p>Data de nascimento: <input type="date" name="data" id="data"></p>
+        
+        <p><b>Genero: </b>
+            Masculino <input type="radio" name="genero" id="masculino"> 
+            Feminino <input type="radio" name="genero" id="feminino">
+            Outros <input type="radio" name="genero" id="outros">
+        </p>
+       
+        <p>RG: <input type="number" name="rg" id="rg" placeholder="Somente números"></p>
+        
+        <p>CPF: <input type="text" name="cpf" id="cpf" value="333.333.222-18" disabled></p>        
+        
+        <p>Estado: 
+            <select name="estado" id="estado">
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+            </select>
+        </p>
+        
+        <p>Cidade: <input type="text" name="cidade" id="cidade"></p>
+        
+        <p>Cep: <input type="text" name="cep" id="cep"></p>
+        
+        <p>
+            Rua: <input type="text" name="rua" id="rua"> 
+            Número: <input type="number" name="numero" id="numero">
+        </p>
+        
+        <p>Complemento: <textarea name="complemento" id="comp" cols="40" rows="5"></textarea></p>
+        
+        <button type="submit">Concluir Cadastro</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+</body>
+</html>
