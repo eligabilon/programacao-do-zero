@@ -4,7 +4,7 @@ Ter o node.js instaldo
 
 # Execução do front
 ```sh
-//entrar na pasta do principal do projeto
+//entrar na pasta principal do projeto
 $ npm install
 $ npm run dev
 ```
