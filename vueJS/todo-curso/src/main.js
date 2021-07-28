@@ -22,8 +22,10 @@ const app = createApp({
       this.todos = await apiTodos.index();
     },
     async createTodo() {
-      const data = await apiTodos.store(this.form);
-      this.todos.push(data);
+      if(this.form.text.trim() != "") {
+        const data = await apiTodos.store(this.form);
+        this.todos.push(data);
+      }
 
       this.form.text = "";
       this.form.done = false;
