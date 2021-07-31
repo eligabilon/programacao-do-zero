@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Treinamento Vue.js</title>
+    <!-- include vue -->
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <!-- page content -->
+    <div id="app">
+       {{ x }}<br>
+       <button v-on:click="clicked">Click me</button>
+    </div>
+  </body>
+  <script>
+      new Vue({
+      el: '#app',
+      data: {
+          x: ""
+      },
+      methods: {
+          clicked: function() {
+              this.x = 'clicked';
+          }
+      }
+  });
+  </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Treinamento Vue.js</title>
+    <!-- include vue -->
+    <script src="https://unpkg.com/vue"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <div v-bind:class="{ active: isActive }">
+        Exemplo de Calsse {{ isActive }}
+      </div>
+    </div>
+  </body>
+  <script>
+   new Vue({
+       el: '#app',
+       data: {
+           isActive: true
+       },
+       methods: {
+       }
+   });
+  </script>
+</html>
