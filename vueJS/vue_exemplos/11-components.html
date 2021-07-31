@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Treinamento Vue.js</title>
+    <!-- include vue -->
+    <script src="https://unpkg.com/vue"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <example></example>
+    </div>
+  </body>
+  <script>
+  var exampleComponent = {
+    template: '<div><p>Exemplo de componente</p></div>'
+  };
+
+  new Vue({
+    el: '#app',
+    components: {
+      'example': exampleComponent
+    },
+    data: {
+        posts: []
+    },
+    methods: {
+    }
+  });
+  </script>
+</html>

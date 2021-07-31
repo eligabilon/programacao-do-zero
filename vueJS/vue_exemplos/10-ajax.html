@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Treinamento Vue.js</title>
+    <!-- include vue -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      Posts:
+      <li v-for="post of posts">
+        <p><strong>{{post.title}}</strong></p>
+        <p>{{post.body}}</p>
+      </li>
+
+    </div>
+  </body>
+  <script>
+  new Vue({
+    el: '#app',
+    created() {
+        this.fetchData();
+    },
+    data: {
+        posts: []
+    },
+    methods: {
+        fetchData() {
+        axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+            this.posts = response.data;
+            });
+        }
+    }
+});
+  </script>
+</html>
