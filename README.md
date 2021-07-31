@@ -4,30 +4,30 @@
 Nesso curso veremos veremos do zero ao avançado em programação.
 Abordaremos as seguintes tecnologias
 
-- HTML
-- ✨CSS ✨
-- Java Script
-- Git
-- Node.js
-- Vue.js
-- TypeScript
-- Rest / RestFull
-- PHP
-- Python
-- MySql
-- PostgreSql
-- MongoDb
-- Redis
-- Java
-- Spring Framework
-- Programação Reativa com Java
-- AWS
-- Docker
-- Portainer
-- Modelagem
-- Análise de Requisitos
-- Scrum
-- Kanban
+- [x] HTML
+- [x] ✨CSS ✨
+- [ ] Java Script
+- [x] Git
+- [ ] Node.js
+- [ ] Vue.js
+- [ ] TypeScript
+- [ ] Rest / RestFull
+- [ ] PHP
+- [ ] Python
+- [ ] MySql
+- [ ] PostgreSql
+- [ ] MongoDb
+- [ ] Redis
+- [ ] Java
+- [ ] Spring Framework
+- [ ] Programação Reativa com Java
+- [ ] AWS
+- [ ] Docker
+- [ ] Portainer
+- [ ] Modelagem
+- [ ] Análise de Requisitos
+- [ ] Scrum
+- [ ] Kanban
 
 ## Ferramentas que serão utilizadas
 
