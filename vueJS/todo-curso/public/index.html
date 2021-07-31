@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="text/css" href="main.css">
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div id="app">
+      <form @submit.prevent="createTodo()">
+        <input type="text" placeholder="Todo" v-model="form.text"/>
+
+        <label class="checkbox-input">
+          {{ form.done ? 'Concluída' : 'Não concluída' }} 
+          <input type="checkbox" :checked="form.done" v-model="form.done"/>
+          <span class="checkmark"></span>
+        </label>
+
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <ul class="todos">
+        <span class="todos-title">Todos</span>
+
+        <li :class="['todo', { done: todo.done }]" v-for="todo in todos">
+          <label class="checkbox-input" @click="toggleTodoStatus(todo)">
+            <input type="checkbox" :checked="todo.done" />
+            <span class="checkmark"></span>
+          </label>
+          <span class="todo-text">{{ todo.text }}</span>
+          <a class="todo-delete" @click="destroyTodo(todo.id)"></a>
+        </li>
+      </ul>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.container{
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    overflow:hidden;
+    transition: 0.5s;
+}
+
+.container:hover{
+    background-color: blue;
+    height: 500px;
+}

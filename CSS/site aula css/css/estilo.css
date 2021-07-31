@@ -1,0 +1,68 @@
+#pagina{
+    margin: 0 20%;
+}
+#nav-bar{
+    background-color: #1565c0;
+    padding: 2%;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-bar .foto-perfil img{
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    padding-top: 6px;
+}
+#nav-bar .titulo-pagina h1{
+    margin-bottom: 0;
+}
+#nav-bar .titulo-pagina span{
+    padding-left: 5px;
+}
+
+#contate_nos{
+    background-color: #fafafa;
+    border: 2px solid #ddd;
+    padding: 40px;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+#contate_nos button{
+    color: #fff;
+    background-color: #1e90ff;
+    height: 40px;
+    width: 100px;
+    border: 2px solid #ddd;
+}
+#contate_nos form{
+    padding: 0 10%;
+    font-size: 12px;
+}
+#contate_nos form textarea{
+    width: 400px;
+    height: 70px;
+}
+.campo-formulario{
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    padding: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+.campo-formulario:focus{
+    border-color: #314bff;
+    box-shadow: 0px 0px 8px #43D1AF;
+}
+
+.label-formulario{
+    font-size: 18px;  
+}
+#titulo_contatenos{
+    text-align: center;
+}
+#rodape{
+    text-align: right;
+}
