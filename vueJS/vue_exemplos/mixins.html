@@ -1,0 +1,29 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <input v-model="mensagem"/>
+
+    <div>
+        {{mensagem | upperCase }}
+    </div>
+</div>
+
+<script>
+    var mixin = {
+        data() {
+            return {
+                mensagem: ``
+            }
+        },
+        filters: {
+            upperCase (value) {
+                return value.toUpperCase()
+            }
+        }
+    };
+
+    new Vue({
+        el: `#app`,
+        mixins: [mixin]
+    })
+</script>
