@@ -1,0 +1,52 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <button @click="clicou">Click</button>
+
+    <div :class="{tranquilo: quantidade < 3,
+                    alerta: quantidade >= 3,
+                    perigo: quantidade >= 6}">
+        voce clicou {{quantidade}} vezes
+    </div>
+
+    <button @click="limpar" :style="{display: apresentarBotaoLimpar()}">Limpar</button>
+</div>
+
+<script>
+    new Vue({
+        el: `#app`,
+        data() {
+            return {
+                quantidade: 0
+            }
+        },
+        methods: {
+            clicou() {
+                this.quantidade = this.quantidade + 1
+            },
+            limpar() {
+                this.quantidade = 0
+            },
+            apresentarBotaoLimpar() {
+                if(this.quantidade < 3) {
+                    return `none`
+                }
+                return `block`
+            }
+        }
+    })
+</script>
+
+<style>
+    .tranquilo {
+        background: green;
+    }
+
+    .alerta{
+        background: yellow;
+    }
+
+    .perigo {
+        background: red;
+    }
+</style>

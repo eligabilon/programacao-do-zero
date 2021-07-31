@@ -1,0 +1,32 @@
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    voce clicou {{mensagem}} vezes
+
+    <button @click="clicou">Click</button>
+</div>
+
+<script>
+    new Vue({
+        el: `#app`,
+        data() {
+            return {
+                mensagem: 0
+            }
+        },
+        created() {
+            console.log(`vue foi criada`)
+        },
+        mounted() {
+            console.log(`vue foi montado`)
+        },
+        updated() {
+            console.log(`Dom foi atualizado`)
+        },
+        methods: {
+            clicou() {
+                this.mensagem = this.mensagem + 1
+            }
+        }
+    })
+</script>

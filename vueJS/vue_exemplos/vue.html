@@ -1,0 +1,84 @@
+<script src="https://unpkg.com/vue"></script>
+
+<input id="app">
+    <h1>data</h1>
+    <h1>{{valor}}</h1>
+
+    <h1>valor computado</h1>
+    <h1>{{valorDuplicado}}</h1>
+
+    <h1>v-model</h1>
+    <input v-model="valor"/>
+
+    <h1>v-if</h1>
+    <a v-show="valor > 5"
+       v-bind:href="link"
+       target="_blank">{{mensagem}}</a>
+    <div v-else>
+        voce nao vai ver
+    </div>
+
+    <h1>v-show</h1>
+    <a v-show="valor > 5"
+       v-bind:href="link"
+       target="_blank">{{mensagem}}</a>
+
+    <h1>v-for</h1>
+    <ul>
+        <li v-for="aluno in alunos">
+            {{aluno}}
+        </li>
+    </ul>
+
+    <div>
+        <div v-for="aluno in alunos">
+            {{aluno}}
+        </div>
+    </div>
+
+    <h1>v-on</h1>
+    <button v-on:click="clicou(`botao 1`)">Click 1</button>
+    <button @click="clicou(`botao 2`)">Click 2</button>
+
+    <input v-on:keydown="digitou"/>
+    <div>
+        {{mensagem}}
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: `#app`,
+        data() {
+            return {
+                valor: 2,
+                link: `https://www.google.com`,
+                mensagem: `Curso vue`,
+                alunos: [`Adriano`, `Alessandro`, `Caio`]
+            }
+        },
+        computed: {
+            valorDuplicado() {
+                return this.valor * 2
+            }
+        },
+        methods: {
+            somar(a , b) {
+                return a + b
+            },
+            multiplicar(a , b) {
+                return a * b
+            },
+            calcular(a, b) {
+                return this.somar(a, b)
+            },
+            clicou(botao) {
+                alert(`clicou no ` + botao)
+            },
+            digitou() {
+                alert(`clicou no `)
+            }
+        }
+    })
+
+</script>
