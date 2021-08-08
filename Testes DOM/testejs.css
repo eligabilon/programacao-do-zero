@@ -1,0 +1,26 @@
+#formulario{
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+}
+
+.campo-formulario{
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    padding: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+.campo-formulario:focus{
+    border-color: #314bff;
+    box-shadow: 0px 0px 8px #43D1AF;
+}
+
+#titule{
+    text-align: center;
+}
+
+#titulo_form{
+    color: chartreuse;
+}
