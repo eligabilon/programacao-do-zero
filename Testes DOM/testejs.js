@@ -1,7 +1,7 @@
 window.onload = function () {
 
     var titulo = document.getElementById("titule")
-    titulo.style.backgroundColor = "red"
+    titulo.style.backgroundColor = "white"
 /////////////////////////////////////////////////////
     var texto = document.getElementById("lorem")
     texto.style.backgroundColor = "black"
@@ -10,6 +10,14 @@ window.onload = function () {
 ////////////////////////////////////////////////////
     var corpo = document.getElementById("corpo")
     corpo.style.backgroundColor = "black"
-    
+////////////////////////////////////////////////////
+    var botao = document.getElementById("botao")
+botao.onclick = function() {myFunction()};
+
+function myFunction(){
+    alert("Inscrição concluida com sucesso!!")
+}
+
+
 }
 

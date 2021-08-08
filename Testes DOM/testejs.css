@@ -1,3 +1,39 @@
+#img img{
+    width: 42px;
+    height: 42px;
+    border-radius: 40px;
+    padding-top: 6px;
+position: absolute;
+right: 15px;
+top: 18px;
+}
+
+#img2 img{
+    width: 42px;
+    height: 42px;
+    border-radius: 40px;
+    padding-top: 6px;
+position: absolute;
+left: 15px;
+top: 18px;
+}
+
+#video{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 15px;
+    top: 400px;
+}
+
+#meme{
+    color: chartreuse;
+    position: absolute;
+    left: 95px;
+    top: 400px;
+}
+
+
 #formulario{
     text-align: center;
     border-radius: 20px;
@@ -13,8 +49,9 @@
     transition: 0.3s;
 }
 .campo-formulario:focus{
-    border-color: #314bff;
+    border-color: #5aff31;
     box-shadow: 0px 0px 8px #43D1AF;
+    color: rgb(24, 146, 13);
 }
 
 #titule{
@@ -24,3 +61,4 @@
 #titulo_form{
     color: chartreuse;
 }
+
