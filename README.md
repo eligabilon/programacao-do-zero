@@ -6,8 +6,10 @@ Abordaremos as seguintes tecnologias
 
 - [x] HTML
 - [x] ✨CSS ✨
-- [ ] Java Script
+- [x] Java Script
 - [x] Git
+- [ ] SqLite
+- [ ] MongoDb
 - [ ] Node.js
 - [ ] Vue.js
 - [ ] TypeScript
@@ -16,7 +18,6 @@ Abordaremos as seguintes tecnologias
 - [ ] Python
 - [ ] MySql
 - [ ] PostgreSql
-- [ ] MongoDb
 - [ ] Redis
 - [ ] Java
 - [ ] Spring Framework
