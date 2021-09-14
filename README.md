@@ -12,7 +12,6 @@ Abordaremos as seguintes tecnologias
 - [ ] MongoDb
 - [ ] Node.js
 - [ ] Vue.js
-- [ ] TypeScript
 - [ ] Rest / RestFull
 - [ ] PHP
 - [ ] Python
@@ -20,8 +19,11 @@ Abordaremos as seguintes tecnologias
 - [ ] PostgreSql
 - [ ] Redis
 - [ ] Java
+- [ ] Java OO
 - [ ] Spring Framework
 - [ ] Programação Reativa com Java
+- [ ] Microsserviços
+- [ ] Filas / Tópicos - RabbitMQ / Kafka
 - [ ] AWS
 - [ ] Docker
 - [ ] Portainer
