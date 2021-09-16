@@ -1,0 +1,53 @@
+div {
+    background-color: bisque;
+    margin: 60px;
+    width: 340px;
+    height: 465px;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    background-color: #a8a1a1;
+    width: 310px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: xx-large;
+    color: #000;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 0.6px 0.6px #424040;
+}
+
+table {
+    background-color: bisque;
+    margin: auto;
+    margin-top: 10px;
+}
+
+td {
+    background-color: #a8a1a1;
+    width: 110px;
+    height: 60px;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 15px;
+    font-weight: bold;    
+    text-shadow: 1px 1px #424040;
+}
+
+td:hover {
+    background-color: #cec9c9;
+    border-radius: 15px;    
+}
+
+td:active {
+    background-color: #f0eeee;
+    border-radius: 15px;
+}
+
+.char {
+    color: #c76161;
+}

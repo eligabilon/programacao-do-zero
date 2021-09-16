@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div>
+        <header id="screen"></header>
+        <table>
+            <tbody>
+                <tr class="char">
+                    <td onclick="clear()">AC</td>
+                    <td onclick="sendChar('*0.01')">%</td>
+                    <td onclick="sendChar('/')">/</td>
+                </tr>
+                <tr class="char">
+                    <td onclick="sendChar('+')">+</td>
+                    <td onclick="sendChar('-')">-</td>
+                    <td onclick="sendChar('*')">x</td>
+                </tr>
+                <tr>
+                    <td onclick="sendChar('7')">7</td>
+                    <td onclick="sendChar('8')">8</td>
+                    <td onclick="sendChar('9')">9</td>
+                </tr>
+                <tr>
+                    <td onclick="sendChar('4')">4</td>
+                    <td onclick="sendChar('5')">5</td>
+                    <td onclick="sendChar('6')">6</td>
+                </tr> 
+                <tr>
+                    <td onclick="sendChar('1')">1</td>
+                    <td onclick="sendChar('2')">2</td>
+                    <td onclick="sendChar('3')">3</td>
+                </tr> 
+                <tr>
+                    <td onclick="sendChar('.')">,</td>
+                    <td onclick="sendChar('0')">0</td>
+                    <td onclick="equalTo()">=</td>
+                </tr>                                                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
