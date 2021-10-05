@@ -9,14 +9,13 @@ Abordaremos as seguintes tecnologias
 - [x] Java Script
 - [x] Git
 - [ ] SqLite
-- [ ] MongoDb
 - [ ] Node.js
 - [ ] Vue.js
 - [ ] Rest / RestFull
-- [ ] PHP
 - [ ] Python
 - [ ] MySql
 - [ ] PostgreSql
+- [ ] MongoDb
 - [ ] Redis
 - [ ] Java
 - [ ] Java OO
