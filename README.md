@@ -19,8 +19,10 @@ Abordaremos as seguintes tecnologias
 - [ ] Redis
 - [ ] Java
 - [ ] Java OO
+- [ ] Test Unitário Junit
+- [ ] TDD
 - [ ] Spring Framework
-- [ ] Programação Reativa com Java
+- [ ] Programação Reativa com Java - Spring WebFlux
 - [ ] Microsserviços
 - [ ] Filas / Tópicos - RabbitMQ / Kafka
 - [ ] AWS
