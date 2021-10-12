@@ -55,8 +55,55 @@ const total = items.reduce((currentTotal, item) => { //reduce o valor a um total
 console.log(total)
 
 
+
 const numbers = [1, 2, 3, 4, 5]
 
 const includesTwo = numbers.includes(2) // valida se o 2 está incluido no array
 
 console.log(includesTwo)
+
+
+const numeros = [5, 12, 30, 10, 99, 4];
+
+const multiMap = numeros.map(function(valor) { //trabalhando com map, multiplicando valores
+	return valor * 2;
+})
+
+console.log(multiMap);
+
+
+
+const multiReduce = numeros.reduce(function(acumulador, valorAtual) { // usando o reduce para trabalhar com array
+	acumulador.push(valorAtual * 2);
+	return acumulador;
+}, []);
+
+console.log(multiReduce);
+
+
+
+const multi2Reduce = numeros.reduce(function(acumulador, valorAtual) { // usando o reduce spread para trabalhar com array	
+	return [...acumulador, valorAtual * 2];
+}, []);
+
+console.log(multi2Reduce);
+
+
+
+function ordenar (a, b){
+    return a - b;
+}
+
+console.log(numeros.sort(ordenar)); //ordenar em ordem crescente
+
+numeros.reverse(); //inverter um array
+
+
+
+var textos = ['b', 'z', 'a', 'd', 'q', 'e'];
+
+textos.sort(); //ordenando textos
+
+textos.forEach(element => {
+  console.log(element)
+});
