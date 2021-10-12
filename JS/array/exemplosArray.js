@@ -107,3 +107,11 @@ textos.sort(); //ordenando textos
 textos.forEach(element => {
   console.log(element)
 });
+
+
+
+let a = [1, 2, 3, 4, 4, 5, 7, 1, 0, 0, 10];
+
+let b = new Set(a); //remove itens duplicados do array
+
+console.log(b);
