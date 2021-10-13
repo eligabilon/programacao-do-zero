@@ -47,14 +47,13 @@ const hasItems = items.every((item) => { //valida se TODOS os itens são menores
 console.log(hasItems)
 
 
-
 const total = items.reduce((currentTotal, item) => { //reduce o valor a um total no nosso caso, faz a soma de todos os valores
 	return item.price + curentTotal
 }, 0)
 
 console.log(total)
 
-
+/*---------------------------------------------------------------------------------------------------------*/
 
 const numbers = [1, 2, 3, 4, 5]
 
@@ -62,6 +61,7 @@ const includesTwo = numbers.includes(2) // valida se o 2 está incluido no array
 
 console.log(includesTwo)
 
+/*---------------------------------------------------------------------------------------------------------*/
 
 const numeros = [5, 12, 30, 10, 99, 4];
 
@@ -115,3 +115,53 @@ let a = [1, 2, 3, 4, 4, 5, 7, 1, 0, 0, 10];
 let b = new Set(a); //remove itens duplicados do array
 
 console.log(b);
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+const users = [
+	{
+		name: 'Eli',
+		sexo: 'M',
+		estado: 'MS'
+	},
+	{
+		name: 'Pedro',
+		sexo: 'M',
+		estado: 'MG'
+	},
+	{
+		name: 'Rafael',
+		sexo: 'M',
+		estado: 'SP'
+	},
+	{
+		name: 'Joana',
+		sexo: 'F',
+		estado: 'RJ'
+	},
+	{
+		name: 'Liane',
+		sexo: 'F',
+		estado: 'MS'
+	},
+	{
+		name: 'João',
+		sexo: 'M',
+		estado: 'RJ'
+	}
+];
+
+function groupFor(arr, key) {
+	return arr.reduce(function(acc, item){ //agrupando dados com reduce
+		if (!acc[item[key]]) {
+			acc[item[key]] = [];
+		}
+		acc[item[key]].push(item);
+
+		return acc;
+	}, {})
+}
+
+const groupForFunction = groupFor(users, 'estado');
+
+console.log(groupForFunction);
