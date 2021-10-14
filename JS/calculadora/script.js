@@ -34,7 +34,7 @@ function equalTo() { //função que calcula o que foi digitado
     num.pop();
   }
   
-  num.push(ans.toString()); //TODO - RESOLVER BUG
+  num.push(ans.toString());
 }
 
 function clearAC() { //função que limpa os valores apresentados na div 'screen'
