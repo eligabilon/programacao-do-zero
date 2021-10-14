@@ -18,9 +18,32 @@ function sendChar(digit) { //função que recebe o que foi digitado no html
 }
 
 function equalTo() { //função que calcula o que foi digitado
+  document.getElementById("screen").innerHTML = '';
 
+  b = '';
+  
+  for (i = 0; i < num.length; i++) {
+    b =b + num[i];    
+  }
+
+  var ans = eval(b)
+
+  document.getElementById("screen").innerHTML = ans;
+
+  while(num.length > 0){
+    num.pop();
+  }
+  
+  num.push(ans.toString()); //TODO - RESOLVER BUG
 }
 
 function clearAC() { //função que limpa os valores apresentados na div 'screen'
+  document.getElementById("screen").innerHTML = "";
 
+    while (num.length > 0) {
+      num.pop();
+    }
+
+    a = '';
+    b = '';
 }
