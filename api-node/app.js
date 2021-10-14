@@ -2,66 +2,74 @@ const http = require("http");
 const express = require("express");
 const { response } = require("express");
 const { v4 } = require("uuid");
+var cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
-const users = [];
+const todos = [
+  {
+    text: "Fazer compra",
+    done: true,
+    id: v4(),
+  },
+];
 
-app.get("/users", (request, response) => {
-  return response.json(users);
+app.get("/todos", (request, response) => {
+  return response.json(todos);
 });
 
-app.get("/users/:id", (request, response) => {
+app.get("/todos/:id", (request, response) => {
   const { id } = request.params;
 
-  const userIndex = users.findIndex((user) => user.id === id);
+  const todoIndex = todos.findIndex((todo) => todo.id === id);
 
-    if (userIndex < 0) {
-      return response.status(404).json("Usuário não encontrado");
-    }
-
-    users[userIndex] = { id, name, email };
-
-  return response.json({ id, name, email });
-});
-
-app.post("/users", (request, response) => {
-  const { name, email } = request.body;
-
-  const user = { id: v4(), name, email };
-
-  users.push(user);
-
-  return response.json(user);
-});
-
-app.put("/users/:id", (request, response) => {
-  const { id } = request.params;
-  const { name, email } = request.body;
-
-  const userIndex = users.findIndex((user) => user.id === id );
-
-  if (userIndex < 0) {
+  if (todoIndex < 0) {
     return response.status(404).json("Usuário não encontrado");
   }
 
-  users[userIndex] = { id, name, email };
+  todos[todoIndex] = { id, text, done };
 
-  return response.json({ id, name, email });
+  return response.json({ id, text, done });
 });
 
-app.delete("/users/:id", function (request, response) {
+app.post("/todos", (request, response) => {
+  const { text, done } = request.body;
+
+  const todo = { id: v4(), text, done };
+
+  todos.push(todo);
+
+  return response.json(todo);
+});
+
+app.put("/todos/:id", (request, response) => {
   const { id } = request.params;
+  const { text, done } = request.body;
 
-  const userIndex = users.findIndex((user) => user.id === id );
+  const todoIndex = todos.findIndex((todo) => todo.id === id);
 
-  if (userIndex < 0) {
+  if (todoIndex < 0) {
     return response.status(404).json("Usuário não encontrado");
   }
 
-  users.splice(userIndex, 1)
+  todos[todoIndex] = { id, text, done };
+
+  return response.json({ id, text, done });
+});
+
+app.delete("/todos/:id", function (request, response) {
+  const { id } = request.params;
+
+  const todoIndex = todos.findIndex((todo) => todo.id === id);
+
+  if (todoIndex < 0) {
+    return response.status(404).json("Usuário não encontrado");
+  }
+
+  todos.splice(todoIndex, 1);
 
   return response.status(204).send();
 });
