@@ -30,8 +30,8 @@ Abordaremos as seguintes tecnologias
 - [ ] Portainer
 - [ ] Modelagem
 - [ ] Análise de Requisitos
-- [ ] Scrum
-- [ ] Kanban
+- [x] Scrum
+- [x] Kanban
 
 ## Ferramentas que serão utilizadas
 
@@ -49,6 +49,7 @@ Abordaremos as seguintes tecnologias
 
 Necessário...
 
+* [Slack](https://app.slack.com/)
 * [Vscode](https://code.visualstudio.com/download)
 * [IntelliJ IDEA](https://www.jetbrains.com/pt-br/idea/download/#section=windows) 
 * [Eclipse - Spring Tools 4](https://spring.io/tools)
