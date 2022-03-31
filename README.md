@@ -56,6 +56,7 @@ Necessário...
 * [BeekeeperStudio](https://www.beekeeperstudio.io/) - Manager de Banco
 * [Whimsical](https://whimsical.com/login) - Modelagem - Prototipagem
 * [Jira](https://www.atlassian.com/br/try/cloud/signup?bundle=jira-software-confluence&edition=free) - Kanban - Board tasks
+* [Miro](https://miro.com/) - Fluxograma - Desenhar fluxos sistemicos
 * [Postman](https://www.postman.com/downloads/canary/)
 * [MongoDB](https://www.mongodb.com/cloud/atlas)
 * [Redis Manager](https://rdm.dev/pricing)
