@@ -36,8 +36,7 @@ Abordaremos as seguintes tecnologias
 ## Ferramentas que serão utilizadas
 
 - Vscode
-- IntelliJ IDEA
-- Eclipse - Spring Tools 4
+- IntelliJ IDEA Community
 - Redis Manager
 - DBeaver
 - Postman
