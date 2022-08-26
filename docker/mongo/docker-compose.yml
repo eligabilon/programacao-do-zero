@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest # usa a ultima img
+    container_name: mongodb
+    restart: unless-stopped
+    environment: # seta variaveis obrigatorias do mongo
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - 27017:27017
+    volumes: # opcional para guardar os dados apos dar um down no container
+      - ./database-data:/data/db

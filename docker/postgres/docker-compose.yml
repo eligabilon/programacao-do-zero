@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: mypassword      
+      POSTGRES_DB: testdb # Opcional: da nome ao banco, ou usa o valor default POSTGRES_USER para dar nome ao banco      
+    ports:
+      - "5432:5432"
+    volumes: 
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata: # mantem os dados do postgres caso o container for removido

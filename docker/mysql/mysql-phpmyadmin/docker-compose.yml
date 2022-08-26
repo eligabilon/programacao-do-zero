@@ -1,0 +1,34 @@
+version: "3.8"
+
+services: # add 2 servicos
+  db: # nome do servico
+    image: mysql:latest # usa a ultima versao do mysql
+    container_name: db # nome do container
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment: # variaveis default conform documentacao
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: testdb # criar banco de dados
+    volumes:
+      - my-db:/var/lib/mysql
+    ports:
+      - '3306:3306'
+  
+  phpmyadmin: # nome do servico
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+     - "8082:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: mypassword #(obrigatorio) setar senha do super usuario
+      PMA_HOST: db   # define o mysql server para acessar
+      PMA_USER: root # usar usuario root para logar
+      PMA_PASSWORD: root # usar senha root para logar
+      # Criar novo usuario
+      # MYSQL_USER: teste
+      # MYSQL_PASSWORD: teste
+
+volumes: # mantem os dados se o container for removido
+  my-db:      

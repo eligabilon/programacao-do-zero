@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  redis:
+    container_name: "redis"
+    image: redis:alpine
+    # especifica o redis.conf arquivo para setar a senha ou configuracoes
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass mypassword
+    ports: 
+      - "6379:6379"
+    # manter o volume apos um down
+    volumes: 
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
