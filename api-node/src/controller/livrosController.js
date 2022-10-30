@@ -13,7 +13,9 @@ class LivroController {
     static buscarLivroId = (req, res) => {
         let id = req.params.id;
         
-        livros.findById(id, (err, livros) => {
+        livros.findById(id)
+        .populate('autor', 'nome')
+        .exec((err, livros) => {
             if(err){
                 res.status(400).send({message: `${err.message} - nao encontrou o livro`})
             } else {
@@ -56,6 +58,15 @@ class LivroController {
                 res.status(500).send({message: `${err.message} - falha ao remover o livro`})
             }
         })       
+    }
+
+    static buscarLivroPorEditora= (req, res) => {
+        const editora = req.query.editora;
+        livros.find({'editora': editora})
+        .populate('autor', 'nome')
+        .exec({}, (err, livros) => {
+            res.status(200).send(livros);
+        })    
     }
 
 }
