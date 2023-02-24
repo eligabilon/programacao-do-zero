@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 
-mongoose.connect('mongodb+srv://gabilon:gabilon@cluster0.bf5p629.mongodb.net/gabilon');
+mongoose.set("strictQuery", false);
+mongoose.connect(
+  "mongodb+srv://gabilon:gabilon@cluster0.bf5p629.mongodb.net/?retryWrites=true&w=majority"
+);
 
 let db = mongoose.connection;
 
