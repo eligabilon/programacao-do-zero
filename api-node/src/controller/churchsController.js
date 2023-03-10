@@ -2,14 +2,14 @@ import churchs from "../models/Church.js";
 
 class ChurchController {
 
-    static buscarChurchs = (req, res) => {
+    static findChurchs = (req, res) => {
         churchs.find()    
         .exec((err, churchs)=>{
             res.status(200).send(churchs);
         })
     }
 
-    static buscarChurchId = (req, res) => {
+    static findChurchId = (req, res) => {
         let id = req.params.id;
         
         churchs.findById(id)
@@ -22,19 +22,19 @@ class ChurchController {
         })        
     }
 
-    static cadastrarChurch = (req, res) => {
+    static addChurch = (req, res) => {
         let church = new churchs(req.body);
 
         church.save((err) => {
             if(err){
-                res.status(500).send({message: `${err.message} - falha ao cadastrar Igreja`})
+                res.status(500).send({message: `${err.message} - falha ao add Igreja`})
             } else {
                 res.status(201).send(church.toJSON())
             }
         })
     }
 
-    static atualizarChurch = (req, res) => {
+    static updateChurch = (req, res) => {
         let id = req.params.id;
         
         churchs.findByIdAndUpdate(id, {$set: req.body}, (err) => {
@@ -46,7 +46,7 @@ class ChurchController {
         })       
     }
 
-    static deletarChurch = (req, res) => {
+    static deleteChurch = (req, res) => {
         let id = req.params.id;
         
         churchs.findByIdAndDelete(id, (err) => {

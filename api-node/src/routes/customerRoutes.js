@@ -4,11 +4,12 @@ import customerController from "../controller/customerController.js";
 const router = express.Router();
 
 router
-    .get('/customers', customerController.buscarCustomers)
-    .get('/customers/:id', customerController.buscarCustomerId)
-    .post('/customers', customerController.cadastrarCustomer)
-    .put('/customers/:id', customerController.atualizarCustomer)
-    .delete('/customers/:id', customerController.deletarCustomer)    
+    .get('/customers', customerController.findCustomers)
+    .get('/customers/find', customerController.findCustomerForChurch)
+    .get('/customers/:id', customerController.findCustomerId)
+    .post('/customers', customerController.addCustomer)
+    .put('/customers/:id', customerController.updateCustomer)
+    .delete('/customers/:id', customerController.deleteCustomer)    
 
 export default router;   
 

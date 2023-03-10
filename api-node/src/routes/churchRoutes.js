@@ -4,11 +4,11 @@ import ChurchController from "../controller/churchsController.js";
 const router = express.Router();
 
 router
-    .get('/churchs', ChurchController.buscarChurchs)
-    .get('/churchs/:id', ChurchController.buscarChurchId)
-    .post('/churchs', ChurchController.cadastrarChurch)
-    .put('/churchs/:id', ChurchController.atualizarChurch)
-    .delete('/churchs/:id', ChurchController.deletarChurch)    
+    .get('/churchs', ChurchController.findChurchs)
+    .get('/churchs/:id', ChurchController.findChurchId)
+    .post('/churchs', ChurchController.addChurch)
+    .put('/churchs/:id', ChurchController.updateChurch)
+    .delete('/churchs/:id', ChurchController.deleteChurch)    
 
 export default router;    
 

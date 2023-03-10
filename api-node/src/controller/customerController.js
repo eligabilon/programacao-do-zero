@@ -1,13 +1,13 @@
 import customers from "../models/Customer.js";
 
 class CustomerController {
-  static buscarCustomers = (req, res) => {
+  static findCustomers = (req, res) => {
     customers.find((err, customers) => {
       res.status(200).send(customers);
     });
   };
 
-  static buscarCustomerId = (req, res) => {
+  static findCustomerId = (req, res) => {
     let id = req.params.id;
 
     customers.findById(id, (err, customers) => {
@@ -21,21 +21,21 @@ class CustomerController {
     });
   };
 
-  static cadastrarCustomer = (req, res) => {
+  static addCustomer = (req, res) => {
     let customer = new customers(req.body);
 
     customer.save((err) => {
       if (err) {
         res
           .status(500)
-          .send({ message: `${err.message} - falha ao cadastrar o usuario` });
+          .send({ message: `${err.message} - falha ao add o usuario` });
       } else {
         res.status(201).send(customer.toJSON());
       }
     });
   };
 
-  static atualizarCustomer = (req, res) => {
+  static updateCustomer = (req, res) => {
     let id = req.params.id;
 
     customers.findByIdAndUpdate(id, { $set: req.body }, (err) => {
@@ -49,7 +49,7 @@ class CustomerController {
     });
   };
 
-  static deletarCustomer = (req, res) => {
+  static deleteCustomer = (req, res) => {
     let id = req.params.id;
 
     customers.findByIdAndDelete(id, (err) => {
@@ -62,6 +62,15 @@ class CustomerController {
       }
     });
   };
+   
+  static findCustomerForChurch= (req, res) => {
+    const common = req.query.common;
+    customers.find({'common': common})
+    .populate('church')
+    .exec({}, (err, customers ) => {
+        res.status(200).send(customers);
+    })    
+}
 }
 
 export default CustomerController;

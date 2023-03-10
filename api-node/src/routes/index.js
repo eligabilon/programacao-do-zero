@@ -1,6 +1,6 @@
 import express from "express";
-import livros from "./livrosRoutes.js";
-import autores from "./autoresRoutes.js";
+import books from "./booksRoutes.js";
+import authors from "./authorsRoutes.js";
 import customers from "./customerRoutes.js";
 import users from "./userRoutes.js";
 import churchs from "./churchRoutes.js"
@@ -10,7 +10,7 @@ const routes = (app) => {
         res.status(200).send('Aplicacao rodando...');
     })
 
-    app.use(express.json(), livros, autores, customers, users, churchs);
+    app.use(express.json(), books, authors, customers, users, churchs);
 }
 
 export default routes;

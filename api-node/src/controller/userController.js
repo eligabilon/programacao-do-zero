@@ -1,13 +1,13 @@
 import users from "../models/User.js";
 
 class UserController {
-  static buscarUsers = (req, res) => {
+  static findUsers = (req, res) => {
     users.find((err, users) => {
       res.status(200).send(users);
     });
   };
 
-  static buscarUserId = (req, res) => {
+  static findUserId = (req, res) => {
     let id = req.params.id;
 
     users.findById(id, (err, users) => {
@@ -21,7 +21,7 @@ class UserController {
     });
   };
 
-  static cadastrarUser = (req, res) => {
+  static addUser = (req, res) => {
     let user = new users(req.body);
 
     user.save((err) => {
@@ -35,7 +35,7 @@ class UserController {
     });
   };
 
-  static atualizarUser = (req, res) => {
+  static updateUser = (req, res) => {
     let id = req.params.id;
 
     users.findByIdAndUpdate(id, { $set: req.body }, (err) => {
@@ -49,7 +49,7 @@ class UserController {
     });
   };
 
-  static deletarUser = (req, res) => {
+  static deleteUser = (req, res) => {
     let id = req.params.id;
 
     users.findByIdAndDelete(id, (err) => {
