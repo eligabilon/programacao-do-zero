@@ -9,6 +9,8 @@ const customerSchema = new mongoose.Schema({
   email: { type: String, required: true },
   church: {type: mongoose.Schema.Types.ObjectId, ref: 'churchs', required: true},
   avatar: { type: String },
+  owner_user: {type: String, required: true},
+  record_date: {type: Date, default: Date.now, required: true}
 });
 
 const customers = mongoose.model("customers", customerSchema);

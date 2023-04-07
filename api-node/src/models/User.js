@@ -7,6 +7,8 @@ const userSchema = new mongoose.Schema({
   lastname: { type: String },
   email: { type: String, required: true },
   password: { type: String, required: true },
+  owner_user: {type: String, required: true},
+  record_date: {type: Date, default: Date.now, required: true}
 });
 
 const users = mongoose.model("users", userSchema);
