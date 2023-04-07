@@ -4,12 +4,12 @@ import dayCultController from "../controller/dayCultController.js";
 const router = express.Router();
 
 router
-    .get('/dayCults', dayCultController.findDayCults)
-    .get('/dayCults/find', dayCultController.findOrganistForDayCult)
-    .get('/dayCults/:id', dayCultController.findDayCultId)
-    .post('/dayCults', dayCultController.addDayCult)
-    .put('/dayCults/:id', dayCultController.updateDayCult)
-    .delete('/dayCults/:id', dayCultController.deleteDayCult)    
+    .get('/days_cults', dayCultController.findDayCults)
+    .get('/days_cults/find', dayCultController.findOrganistForDayCult)
+    .get('/days_cults/:id', dayCultController.findDayCultId)
+    .post('/days_cults', dayCultController.addDayCult)
+    .put('/days_cults/:id', dayCultController.updateDayCult)
+    .delete('/days_cults/:id', dayCultController.deleteDayCult)    
 
 export default router;   
 
