@@ -14,6 +14,6 @@ const dayCultSchema = new mongoose.Schema(
     }
 );
 
-const daysCults = mongoose.model('daysCults', dayCultSchema);
+const daysCults = mongoose.model('days_cults', dayCultSchema);
 
 export default daysCults;
