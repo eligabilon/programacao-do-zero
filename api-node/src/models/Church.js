@@ -4,7 +4,7 @@ const churchSchema = new mongoose.Schema(
     {
         id: {type: String},
         city: {type: String, required: true},
-        common: {type: String, required: true},
+        common: {type: String, required: true, unique: true},
         owner_user: {type: String, required: true},
         record_date: {type: Date, default: Date.now, required: true}
     }
