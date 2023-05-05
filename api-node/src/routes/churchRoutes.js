@@ -10,7 +10,7 @@ router
     .put('/churchs/:id', ChurchController.updateChurch)
     .delete('/churchs/:id', ChurchController.deleteChurch)    
 
-export default router;    
+export default router;
 
 
     
