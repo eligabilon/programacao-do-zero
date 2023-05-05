@@ -7,6 +7,7 @@ router
     .get('/customers', customerController.findCustomers)
     .get('/customers/find', customerController.findCustomerForChurch)
     .get('/customers/:id', customerController.findCustomerId)
+    .get('/customers/find/:id', customerController.findCustomerIdMoreChurch)
     .post('/customers', customerController.addCustomer)
     .put('/customers/:id', customerController.updateCustomer)
     .delete('/customers/:id', customerController.deleteCustomer)    

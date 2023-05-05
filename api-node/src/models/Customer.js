@@ -6,9 +6,11 @@ const customerSchema = new mongoose.Schema({
   mobile: { type: String, required: true },
   firstname: { type: String, required: true },
   lastname: { type: String },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   church: {type: mongoose.Schema.Types.ObjectId, ref: 'churchs', required: true},
   avatar: { type: String },
+  owner_user: {type: String, required: true},
+  record_date: {type: Date, default: Date.now, required: true}
 });
 
 const customers = mongoose.model("customers", customerSchema);
