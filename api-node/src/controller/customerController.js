@@ -22,6 +22,17 @@ class CustomerController {
     });
   };
 
+  static findCustomerIdMoreChurch = (req, res) => {
+    let id = req.params.id;
+    
+    customers
+      .findById(id)
+      .populate("church")
+      .exec({}, (err, customers) => {    
+        res.status(200).send(customers);
+      });
+  };
+
   static addCustomer = (req, res) => {
     let customer = new customers(req.body);
 
@@ -87,6 +98,7 @@ class CustomerController {
 
   static findCustomerForChurch = (req, res) => {
     const common = req.query.common;
+    
     customers
       .find({ common: common })
       .populate("church")
