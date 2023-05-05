@@ -11,6 +11,7 @@ const sisterdaySchema = new mongoose.Schema({
   church: {type: mongoose.Schema.Types.ObjectId, ref: 'churchs', required: true},
   typecult: { type: String },
   extracult: { type: Boolean },
+  record_date: {type: Date, default: Date.now, required: true}
 });
 
 const sisterday = mongoose.model("sisterday", sisterdaySchema);
