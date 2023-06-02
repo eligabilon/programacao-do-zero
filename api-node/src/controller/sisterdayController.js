@@ -59,4 +59,4 @@ class SisterdayController {
     }
 }
 
-export default SiterdayController;
+export default SisterdayController;

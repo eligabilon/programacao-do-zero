@@ -1,13 +1,13 @@
 import express  from "express";
-import SisterdayController from "../controller/sisterdayController.js";
+import sisterdayController from "../controller/sisterdayController.js";
 
 const router = express.Router();
 
 router
-    .get('/sisterday', SisterdayController.findSisterday)
-    .get('/sisterday/:id', SisterdayController.findSisterdayId)
-    .post('/sisterday', SisterdayController.addSisterday)
-    .put('/sisterday/:id', SisterdayController.updateSisterday)
-    .delete('/sisterday/:id', SisterdayController.deleteSisterday)    
+    .get('/sisterday', sisterdayController.findSisterday)
+    .get('/sisterday/:id', sisterdayController.findSisterdayId)
+    .post('/sisterday', sisterdayController.addSisterday)
+    .put('/sisterday/:id', sisterdayController.updateSisterday)
+    .delete('/sisterday/:id', sisterdayController.deleteSisterday)    
 
 export default router;   
