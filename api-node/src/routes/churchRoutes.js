@@ -11,8 +11,3 @@ router
     .delete('/churchs/:id', ChurchController.deleteChurch)    
 
 export default router;
-
-
-    
-
-
