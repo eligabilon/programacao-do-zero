@@ -16,4 +16,4 @@ const sisterdaySchema = new mongoose.Schema({
 
 const sisterday = mongoose.model("sisterday", sisterdaySchema);
 
-export default customers;
+export default sisterday;

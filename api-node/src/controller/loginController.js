@@ -15,10 +15,17 @@ class LoginController {
       }
 
       if (login && login.status) {
+<<<<<<< HEAD
         return res.status(200).send(this.generateToken(login));
         
       }
       return res.status(400).send("Usuário/senha inválido.");
+=======
+        res.status(200).send(this.generateToken(login));
+        return;
+      }
+      res.status(400).send("Usuario/senha inválido.");
+>>>>>>> e1f62f231ef70c93d71222e058d633a2dd3d2cb6
     });
   };
 
