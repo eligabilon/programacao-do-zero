@@ -10,6 +10,19 @@ class jwrSecurity {
       }
     });
   };
+
+  static generateToken(user) {
+    const payload = {
+      id: user._id,
+      name: `${user.firstname} ${user.lastname}`,
+      email: user.email,
+      role: user.role
+    };
+
+    const token = jwt.sign(payload, 'segredo_do_token', { expiresIn: '1h' });
+    return token;
+  }
+
 }
 
 export default jwrSecurity;
